@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flourish</title>
+
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'commoncss/colors.css'%}">
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesomefree/css/fontawesome.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'fontawesomefree/css/solid.css' %}" type="text/css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href={% url 'core:capture' %}><i class="fa-sharp fa-solid fa-pen-to-square"></i></a></li>
+            <li><a href={% url 'core:organize' %}><i class="fa-sharp fa-solid fa-tree"></i></a></li>
+            <li><a href={% url 'core:plan' %}><i class="fa-sharp fa-solid fa-calendar-days"></i></a></li>
+            <li><a href={% url 'core:focus' %}><i class="fa-sharp fa-solid fa-arrows-to-dot"></i></a></li>
+        </ul>
+        <ul>
+            <li><a href={% url 'core:profile' %}><i class="fa-solid fa-user"></i></a></li>
+            <li><a href={% url 'core:settings' %}><i class="fa-sharp fa-solid fa-gear"></i></a></li>
+        </ul>
+    </nav>
+    <main>
+        {%block content %}
+        <p>Core</p>
+        {% endblock %}
+    </main>
+</body>
+</html>

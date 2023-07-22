@@ -1,0 +1,6 @@
+{% extends 'core/core_base.html' %} 
+{% block content %} 
+{% for domain in tree.domains %}
+<p>{{domain.name}}</p>
+{% endfor %} 
+{% endblock %}

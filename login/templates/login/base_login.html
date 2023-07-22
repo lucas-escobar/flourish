@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flourish</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'commoncss/colors.css' %}">
+    <link rel="stylesheet" href="{% static 'login/styles.css' %}">
+
+</head>
+<body>
+    <main>
+        {%block content %}
+        <h1>Log In</h1>
+        <form action="{% url 'login:auth' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Sign In</button>
+            {% if errmsg %}<p><strong>{{errmsg}}</strong></p>{% endif %}
+        </form>
+        <a href="{% url 'login:signup' %}">New? Create a new account here.</a>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 LucentSystems. All rights reserved.</p>
+    </footer>
+</body>
+</html>

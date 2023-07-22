@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flourish</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'commoncss/colors.css'%}" />
+    <link rel="stylesheet" href="{% static 'home/styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="hero">
+        <div class="maintitle">
+          <h1>Flourish</h1>
+          <p>Capture &bull; Organize &bull; Plan &bull; Focus</p>
+        </div>
+        <div class="cta">
+          <a href="{% url 'login:login' %}">Log In</a>
+          <a href="{% url 'login:signup' %}">Sign Up</a>
+        </div>
+      </div>
+      <div class="downprompt">
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+    </header>
+    <main>
+      <section class="overview">
+        <h2>Overview</h2>
+        <p>
+          A personal management app designed for professionals and students. It
+          provides a minimalistic and easy-to-use framework for goal setting,
+          project/task management, and achieving balance in life. Flourish is
+          made by LucentSystems, a brand dedicated to integrating nature with
+          technology solutions.
+        </p>
+      </section>
+      <section class="capture">
+        <h2>Capture</h2>
+        <p>
+          The Capture feature allows you to freeform write and capture your
+          thoughts, helping to alleviate the burden on your mind.
+        </p>
+      </section>
+      <section class="organize">
+        <h2>Organize</h2>
+        <p>
+          Organize your thoughts and derive tasks, goals, and projects from
+          them. Create a structured framework to manage your priorities.
+        </p>
+      </section>
+      <section class="plan">
+        <h2>Plan</h2>
+        <p>
+          Plan your goals and prioritize them based on their importance. Gain
+          clarity and create a roadmap to achieve them.
+        </p>
+      </section>
+      <section class="focus">
+        <h2>Focus</h2>
+        <p>
+          The Focus feature provides a Pomodoro timer and ambiance to help you
+          concentrate on a selected task. It assists in task selection and
+          enhances your focus during work sessions.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus
+            varius lectus, at viverra purus eleifend vel.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <p>123 Street, City</p>
+          <p>lsystems@example.com</p>
+          <p>Phone: 123-456-7890</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2023 LucentSystems. All rights reserved. |
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+:root {
+  --gray-100: hsl(204, 45%, 98%);
+  --gray-200: hsl(210, 38%, 95%);
+  --gray-300: hsl(214, 32%, 91%);
+  --gray-400: hsl(211, 25%, 84%);
+  --gray-500: hsl(214, 20%, 69%);
+  --gray-600: hsl(216, 15%, 52%);
+  --gray-700: hsl(218, 17%, 35%);
+  --gray-800: hsl(218, 23%, 23%);
+  --gray-900: hsl(220, 26%, 14%);
+}
+
+:root {
+  /* Base */
+
+  /* Text */
+
+  /* Accent */
+
+  /* Action */
+
+  /* Border */
+
+  /* Error */
+
+  /* Success */
+
+  /* Warning */
+}
+
+:root {
+  /* Primary Colors */
+  --primary-color: #092b55;
+  --primary-text-color: #ffffff;
+  --primary-background-color: #0c365d;
+
+  /* Secondary Colors */
+  --secondary-color: #1f6792;
+  --secondary-text-color: #ffffff;
+  --secondary-background-color: #134873;
+
+  /* Tertiary Colors */
+  --tertiary-color: #14596a;
+  --tertiary-text-color: #ffffff;
+  --tertiary-background-color: #0c3f4e;
+
+  /* Light and Dark Variations */
+  --light-color: #092b55;
+  --dark-color: #051527;
+  --light-background-color: #0c365d;
+  --dark-background-color: #081f3b;
+
+  /* Additional Colors */
+  --link-color: #337ab7;
+  --border-color: #1f3f61;
+  --error-color: #ff5252;
+  --success-color: #00a78b;
+  --warning-color: #ffa000;
+}
+
+:root {
+  /* Primary Colors */
+  --primary-color: [#092b55, #0a315e, #0c365d];
+  --primary-text-color: [#ffffff, #f7f7f7, #f2f2f2];
+  --primary-background-color: [#0c365d, #0e3b62, #113f68];
+
+  /* Secondary Colors */
+  --secondary-color: [#1f6792, #216e9b, #23759f];
+  --secondary-text-color: [#ffffff, #f7f7f7, #f2f2f2];
+  --secondary-background-color: [#134873, #15507a, #176581];
+
+  /* Tertiary Colors */
+  --tertiary-color: [#14596a, #165f72, #19657a];
+  --tertiary-text-color: [#ffffff, #f7f7f7, #f2f2f2];
+  --tertiary-background-color: [#0c3f4e, #0e4556, #114b5e];
+
+  /* Light and Dark Variations */
+  --light-color: [#092b55, #0a315e, #0c365d];
+  --dark-color: [#051527, #051527, #051527];
+  --light-background-color: [#0c365d, #0e3b62, #113f68];
+  --dark-background-color: [#081f3b, #081f3b, #081f3b];
+
+  /* Additional Colors */
+  --link-color: [#337ab7, #3582bd, #3789c3];
+  --border-color: [#1f3f61, #214367, #23486d];
+  --error-color: [#ff5252, #ff5a5a, #ff6161];
+  --success-color: [#00a78b, #00ae8f, #00b493];
+  --warning-color: [#ffa000, #ffa200, #ffa400];
+}

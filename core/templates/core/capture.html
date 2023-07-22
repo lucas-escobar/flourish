@@ -1,0 +1,88 @@
+{% extends 'core/core_base.html' %} {% block content %}
+<form
+  class="capture_container open disable-transition"
+  method="post"
+  action="{% url 'core:capture' %}"
+>
+  {% csrf_token %}
+  <div class="capturearea_wrap">
+    <textarea
+      class="capturearea"
+      name="capturearea"
+      rows="1"
+      placeholder="What's on your mind?"
+    ></textarea>
+  </div>
+  <button class="capturebtn" type="submit">
+    <i class="fa-solid fa-plus"></i>
+  </button>
+</form>
+<div class="capture_history disable-transition">
+  <div class="capture_history_ctrl">
+    <button class="history_toggle">
+      <i class="fa-solid fa-clock-rotate-left"></i>
+    </button>
+  </div>
+  <script>
+    const button = document.querySelector(".history_toggle");
+    const history = document.querySelector(".capture_history");
+    const captureContainer = document.querySelector(".capture_container");
+    const textarea = document.querySelector(".capturearea");
+
+    button.addEventListener("click", () => {
+      history.classList.toggle("open");
+      captureContainer.classList.toggle("open");
+      localStorage.setItem("historyIsOpen", history.classList.contains("open"));
+    });
+
+    textarea.addEventListener("input", () => {
+      localStorage.setItem("textAreaContent", textarea.value);
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const textAreaContent = localStorage.getItem("textAreaContent");
+      const textarea = document.querySelector(".capturearea");
+
+      if (textAreaContent) {
+        textarea.value = textAreaContent;
+      }
+
+      const historyIsOpen = localStorage.getItem("historyIsOpen");
+      const history = document.querySelector(".capture_history");
+      const captureContainer = document.querySelector(".capture_container");
+
+      if (historyIsOpen === "true") {
+        history.classList.add("open");
+        captureContainer.classList.remove("open");
+      } else {
+        history.classList.remove("open");
+        captureContainer.classList.add("open");
+      }
+
+      history.classList.add("disable-transition");
+      captureContainer.classList.add("disable-transition");
+
+      setTimeout(() => {
+        history.classList.remove("disable-transition");
+        captureContainer.classList.remove("disable-transition");
+      }, 10);
+    });
+  </script>
+  <ul>
+    {% for capture in capturehistory %}
+    <li id="{{capture.id}}">
+      <p>{{capture}}</p>
+      <form method="post" action="">
+        {% csrf_token %}
+        <input type="hidden" name="delete" value="{{capture.id}}" />
+        <button class="delete_capture">
+          <i class="fa-solid fa-square-minus"></i>
+        </button>
+      </form>
+      <p>{{capture.text}}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
